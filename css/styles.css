@@ -144,22 +144,6 @@ img {
 	fill: var(--accent-color);
 }
 
-.email {
-	width: 20px;
-	height: 20px;
-	margin-right: 10px;
-	background-size: contain;
-	fill: var(--primary-text-color);
-}
-
-.phone {
-	width: 20px;
-	height: 20px;
-	margin-right: 10px;
-	background-size: contain;
-	fill: var(--primary-text-color);
-}
-
 .hero-section {
 	padding-top: 192px;
 	padding-bottom: 192px;
@@ -544,8 +528,9 @@ img {
 	margin-bottom: 0;
 }
 
-.portfolio-flex .item:hover,
-.portfolio-flex .item:focus {
+.portfolio-flex .link:hover,
+.portfolio-flex .link:focus {
+	display: block;
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 

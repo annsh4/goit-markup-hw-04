@@ -41,16 +41,24 @@ img {
 }
 
 .visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	white-space: nowrap;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+}
+
+.media {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
 }
 
 .main-nav {
@@ -121,6 +129,9 @@ img {
 }
 
 .site-contacts .link {
+	display: inline-flex;
+	align-items: center;
+
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
@@ -130,6 +141,23 @@ img {
 .site-contacts .link:hover,
 .site-contacts .link:focus {
 	color: var(--accent-color);
+	fill: var(--accent-color);
+}
+
+.email {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	background-size: contain;
+	fill: var(--primary-text-color);
+}
+
+.phone {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	background-size: contain;
+	fill: var(--primary-text-color);
 }
 
 .hero-section {
@@ -138,6 +166,17 @@ img {
 
 	background-color: var(--primary-text-color);
 	text-align: center;
+}
+
+.overlay {
+	max-width: 1440px;
+	min-height: 600px;
+	margin: 0 auto;
+	background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+		url("../images/people-office.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
 .hero-section .title {
@@ -171,6 +210,7 @@ img {
 .modal-btn:hover,
 .modal-btn:focus {
 	background-color: var(--accent-btn-color);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .benefits-section {
@@ -185,6 +225,17 @@ img {
 
 .benefits .item {
 	width: 264px;
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 112px;
+	margin-bottom: 8px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: var(--primary-btn-color);
 }
 
 .benefits .item:not(:last-child) {
@@ -266,6 +317,7 @@ img {
 .team .item {
 	width: 264px;
 	background: var(--primary-white-color);
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team .item:not(:last-child) {
@@ -289,7 +341,7 @@ img {
 
 .person-position {
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 8px;
 
 	font-size: 16px;
 	line-height: 1.5;
@@ -298,11 +350,99 @@ img {
 	text-align: center;
 }
 
+.person-info {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.person-info .item {
+	width: 40px;
+	height: 40px;
+	background-color: var(--accent-color);
+	border-radius: 50%;
+}
+
+.customers-section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+
+.customers-section .title {
+	margin-top: 0;
+	margin-bottom: 72px;
+
+	font-weight: var(--secondary-font-weight);
+	font-size: 36px;
+	line-height: 1.1;
+	text-align: center;
+	letter-spacing: 0.02em;
+	text-transform: capitalize;
+}
+
+.customers {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.customers .customer {
+	width: 168px;
+	height: 88px;
+	border-radius: 4px 4px 4px 4px;
+	border: 1px solid #8e8f99;
+	fill: #8e8f99;
+}
+
+.customers .customer:hover,
+.customers .customer:focus {
+	fill: var(--accent-color);
+	border: 1px solid var(--accent-color);
+}
+
+.customers .item:not(:last-child) {
+	margin-right: 24px;
+}
+
 .footer {
 	padding-top: 100px;
 	padding-bottom: 100px;
 
 	background-color: var(--primary-text-color);
+}
+
+.footer-items {
+	display: flex;
+	align-items: flex-start;
+}
+
+.footer-items .item:not(:last-child) {
+	margin-right: 120px;
+}
+
+.social-media {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-media .item {
+	width: 40px;
+	height: 40px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+}
+
+.social-media .item:not(:last-child) {
+	margin-right: 16px;
+}
+
+.social-media .item:hover,
+.social-media .item:focus {
+	background-color: #31d0aa;
 }
 
 .logo-footer {
@@ -329,6 +469,17 @@ img {
 	margin-bottom: 0;
 	width: 264px;
 
+	font-size: 16px;
+	line-height: 1.5;
+	letter-spacing: 0.02em;
+	color: var(--primary-white-color);
+}
+
+.footer .title {
+	margin-top: 0;
+	margin-bottom: 15px;
+
+	font-weight: var(--secondary-font-weight);
 	font-size: 16px;
 	line-height: 1.5;
 	letter-spacing: 0.02em;
@@ -371,6 +522,7 @@ img {
 .portfolio-type:focus {
 	color: var(--primary-white-color);
 	background-color: var(--accent-color);
+	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-flex {
@@ -390,6 +542,11 @@ img {
 
 .portfolio-flex .item:nth-last-child(-n + 3) {
 	margin-bottom: 0;
+}
+
+.portfolio-flex .item:hover,
+.portfolio-flex .item:focus {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .product-container {
